@@ -27,17 +27,34 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Belajar UI"),
-          actions:[
+          actions: [
             IconButton(icon: const Icon(Icons.mail), onPressed: () {}),
             IconButton(icon: const Icon(Icons.pin), onPressed: () {}),
             IconButton(icon: const Icon(Icons.send), onPressed: () {}),
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home)),
-          BottomNavigationBarItem(icon: Icon(Icons.search)),
-          BottomNavigationBarItem(icon: Icon(Icons.settings)),
-        ],),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Icon(
+                  Icons.mail,
+                  size: 128,
+                )
+              ],
+            )
+          ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: "Settings"),
+          ],
+        ),
       ),
     );
   }
