@@ -75,3 +75,48 @@ class HelloWorld extends StatelessWidget {
     );
   }
 }
+
+class BelajarContainer extends StatelessWidget {
+  const BelajarContainer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Container"),
+        ),
+        body: Container(
+          //margin: jarak antara container dengan widget lainnya
+          //(yang diluar container)
+          //padding: jarak dari sisi container ke widget yang ada didalam container
+          // widget pengisi: EdgeInsets
+          ///EdgeInsets.all() untuk margin semua sisi
+          ///EdgeInsets.fromLTRB() untuk margin, isi dari kiri, atas, kanan, bawah'
+          ///EdgeInsets.only() isi dengan left, right, top, atau bottom. seperti martgin_bottom, dst. di Android native
+
+          /// Container juga punya decoration
+
+          decoration: BoxDecoration(
+              color: Colors.red,
+              //Memberikan radius:
+              borderRadius: BorderRadius.circular(16),
+              //Warna nya akan sama saja, beda jika kita memakai Gradient
+              gradient: const LinearGradient(
+                colors: [Colors.amber, Colors.blue],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              )),
+          margin: const EdgeInsets.all(25.0),
+          padding: const EdgeInsets.all(16),
+          // color: Colors.red,
+          //Kalau sudah pakai BoxDecoration, g ush dikasih color di Container nya
+          child: Container(
+            color: Colors.blue,
+          ),
+        ),
+      ),
+    );
+  }
+}
