@@ -33,3 +33,54 @@ class _StateFulState extends State<StateFul> {
     return Container();
   }
 }
+
+//Stateful widget ini punya 2 class
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+//class kedua, beda class sama yg diatas
+class _MyAppState extends State<MyApp> {
+  //Kalau mau bikin kodingan, bikin diatas sini
+
+  int number = 0;
+
+  void tekanTombol() {
+    //Untuk merefresh tampiulan, gunakan setState.
+    //karena jik megubah value saja tanpa mengubah tampilan, maka tampilan tersebut tidak akan ter update
+    setState(() {
+      number++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Stateful Widget"),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                number.toString(),
+                style: TextStyle(fontSize: number.toDouble()),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  tekanTombol();
+                },
+                child: const Text("Tambah Bilangan"),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

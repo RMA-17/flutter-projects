@@ -1,1 +1,0 @@
-Kalau di flutter nambahin image, segala macam di dalem folder assets

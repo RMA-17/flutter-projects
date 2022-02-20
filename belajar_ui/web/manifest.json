@@ -1,6 +1,6 @@
 {
-    "name": "belajar_ui",
-    "short_name": "belajar_ui",
+    "name": "Belajar UI",
+    "short_name": "Belajar UI",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
