@@ -15,40 +15,50 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: blueColour,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.greenAccent,
+        isExtended: false,
+        onPressed: () {},
+        child: const Icon(Icons.add, size: 28),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              const SizedBox(height: 40),
-              CircleAvatar(
-                radius: 60,
-                backgroundColor: lightBlueColour,
-                child: Image.asset(
-                  'images/gudao.png',
-                  width: 100,
-                  height: 100,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                const SizedBox(height: 40),
+                CircleAvatar(
+                  radius: 60,
+                  backgroundColor: lightBlueColour,
+                  child: Image.asset(
+                    'images/gudao.png',
+                    width: 100,
+                    height: 100,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 20),
-              Text(
-                "Gudao",
-                style: TextStyle(color: whiteColour, fontSize: 20),
-              ),
-              const SizedBox(height: 2),
-              Text(
-                "Chaldea Staff",
-                style: TextStyle(color: lightBlueColour),
-              ),
-              const SizedBox(height: 30),
-              Expanded(
-                child: Container(
+                const SizedBox(height: 20),
+                Text(
+                  "Gudao",
+                  style: TextStyle(color: whiteColour, fontSize: 20),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  "Chaldea Staff",
+                  style: TextStyle(color: lightBlueColour),
+                ),
+                const SizedBox(height: 30),
+                Container(
                   width: double.infinity,
                   padding:
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
                   decoration: BoxDecoration(
-                      color: whiteColour,
-                      borderRadius: const BorderRadius.vertical(
-                          top: Radius.circular(40))),
+                    color: whiteColour,
+                    borderRadius: const BorderRadius.vertical(
+                      top: Radius.circular(40),
+                    ),
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -74,17 +84,17 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(height: 30),
                       Text("Groups", style: titleTextStyle),
                       const ChatTile(
-                        name: "Chaldea Security Organization",
+                        name: "Chaldea Staff",
                         imageUrl: 'images/chaldea.jpg',
                         text: "Da Vinci: Seluruh staff...",
                         time: "2:30",
                         isReaded: true,
-                      )
+                      ),
                     ],
                   ),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),

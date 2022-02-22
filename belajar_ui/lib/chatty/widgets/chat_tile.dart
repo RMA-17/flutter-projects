@@ -38,7 +38,7 @@ class ChatTile extends StatelessWidget {
                   Text(
                     name,
                     style: titleTextStyle,
-                    overflow: TextOverflow.fade,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   Text(
                     text,
