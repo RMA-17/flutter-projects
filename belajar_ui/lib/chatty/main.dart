@@ -1,3 +1,4 @@
+import 'package:belajar_ui/chatty/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,15 +12,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Poppins'),
       title: "Chatty",
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Chatty"),
-        ),
-        body: Column(
-          children: [],
-        ),
-      ),
+      home: const HomePage(),
     );
   }
 }
