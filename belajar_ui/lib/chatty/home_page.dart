@@ -1,7 +1,6 @@
 import 'package:belajar_ui/chatty/theme.dart';
 import 'package:belajar_ui/chatty/widgets/chat_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -40,12 +39,12 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  "Gudao",
+                  "Mang Mamang",
                   style: TextStyle(color: whiteColour, fontSize: 20),
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  "Chaldea Staff",
+                  "Travelling Agent",
                   style: TextStyle(color: lightBlueColour),
                 ),
                 const SizedBox(height: 30),
@@ -84,11 +83,18 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(height: 30),
                       Text("Groups", style: titleTextStyle),
                       const ChatTile(
-                        name: "Chaldea Staff",
+                        name: "Canonical Travel",
                         imageUrl: 'images/chaldea.jpg',
-                        text: "Da Vinci: Seluruh staff...",
+                        text: "Sopo: Bang, gmn",
                         time: "2:30",
                         isReaded: true,
+                      ),
+                      const ChatTile(
+                        name: "Travel Group",
+                        imageUrl: 'images/ic_gunung.jpg',
+                        text: "Amang: Gimana nih bang",
+                        time: "Now",
+                        isReaded: false,
                       ),
                     ],
                   ),
