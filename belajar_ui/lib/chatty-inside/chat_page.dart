@@ -1,4 +1,5 @@
 import 'package:belajar_ui/chatty-inside/widgets/chat_tile.dart';
+import 'package:belajar_ui/chatty/theme.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
@@ -57,45 +58,75 @@ class ChatPage extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                children: const [
-                  ChatTile(
-                    name: "Louis Moon",
-                    text: "Wassup everyone?",
-                    time: "12:03",
-                    isMe: false,
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              children: const [
+                ChatTile(
+                  name: "Louis Moon",
+                  text: "Wassup everyone?",
+                  time: "12:03",
+                  isMe: false,
+                ),
+                SizedBox(height: 12),
+                ChatTile(
+                  name: "Mang Mamang",
+                  text: "Good, How abt u?",
+                  time: "12:04",
+                  isMe: true,
+                ),
+                SizedBox(height: 12),
+                ChatTile(
+                  name: "Moo Lord",
+                  text: "Fine here",
+                  time: "12:05",
+                  isMe: false,
+                ),
+                SizedBox(height: 12),
+                ChatTile(
+                  name: "Mang Mamang",
+                  text: "Wanna meet sometime?",
+                  time: "12:04",
+                  isMe: true,
+                ),
+              ],
+            ),
+          ),
+          const Spacer(),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            decoration: const BoxDecoration(color: Colors.blue),
+            child: SafeArea(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.only(left: 8),
+                      height: 30,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(8),
+                        ),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const [
+                          Text("Type a message..."),
+                        ],
+                      ),
+                    ),
                   ),
-                  SizedBox(height: 12),
-                  ChatTile(
-                    name: "Mang Mamang",
-                    text: "Good, How abt u?",
-                    time: "12:04",
-                    isMe: true,
-                  ),
-                  SizedBox(height: 12),
-                  ChatTile(
-                    name: "Moo Lord",
-                    text: "Fine here",
-                    time: "12:05",
-                    isMe: false,
-                  ),
-                  SizedBox(height: 12),
-                  ChatTile(
-                    name: "Mang Mamang",
-                    text: "Wanna meet sometime?",
-                    time: "12:04",
-                    isMe: true,
-                  ),
-                  SizedBox(height: 12),
-                  ChatTile(
-                    name: "John",
-                    text: "Sure, that'll be great",
-                    time: "12:05",
-                    isMe: false,
-                  ),
+                  CircleAvatar(
+                    backgroundColor: lightBlueColour,
+                    child: const Icon(
+                      Icons.send,
+                      color: Colors.white,
+                    ),
+                  )
                 ],
-              )),
+              ),
+            ),
+          )
         ],
       ),
     );
