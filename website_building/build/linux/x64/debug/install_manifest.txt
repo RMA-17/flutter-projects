@@ -1,0 +1,14 @@
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/website_building
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/background.png
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/logo.png
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/illustration.png
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/raka/flutter-projects/website_building/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
