@@ -59,3 +59,20 @@ class FirstPage extends StatelessWidget {
     );
   }
 }
+
+
+
+// Kalau mau navigasi:
+
+// pushNamed('/nama_route') = pindah saja, bisa di back nantinya
+// pushReplacementNamed('/nama_route') = Pindah lalu finish();
+// pop('/bisa_nama_route' RouteClass()) = Menghilangkan atau navigateUp()
+
+//Untuk yang pakek Object Route:
+// push(context, MaterialPageRoute (builder, (context) {
+// return PageTujuan()
+// }))
+
+
+
+
