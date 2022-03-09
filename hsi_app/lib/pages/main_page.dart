@@ -8,34 +8,42 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        systemOverlayStyle:
-            const SystemUiOverlayStyle(statusBarColor: Colors.blue),
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Ahlan wa Sahlan",
-              style:
-                  GoogleFonts.roboto(fontWeight: FontWeight.bold, fontSize: 24),
-            ),
-            Text(
-              "EDUHSI versi 29292922929",
-              style: GoogleFonts.roboto(
-                  fontWeight: FontWeight.normal, fontSize: 12),
-            )
-          ],
-        ),
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-        actions: [Image.asset('assets/images/hsi_logo.png')],
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(12),
             child: Column(
               children: [
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Ahlan wa Sahlan",
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.bold, fontSize: 24),
+                            ),
+                            Text(
+                              "EDUHSI versi 29292922929",
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.normal, fontSize: 12),
+                            )
+                          ],
+                        ),
+                        Image.asset(
+                          'assets/images/hsi_logo.png',
+                          scale: 6,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+                Divider(indent: 20),
+                const SizedBox(height: 26),
                 Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
