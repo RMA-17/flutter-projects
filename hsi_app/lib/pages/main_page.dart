@@ -42,7 +42,7 @@ class MainPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                Divider(indent: 20),
+                const Divider(indent: 20),
                 const SizedBox(height: 26),
                 Card(
                   shape: RoundedRectangleBorder(
