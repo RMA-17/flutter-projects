@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hsi_app/pages/main_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -10,6 +9,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  var togglePassword = false;
+
+  void toggle() {
+    setState(() {
+      togglePassword = !togglePassword;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,14 +63,18 @@ class _LoginPageState extends State<LoginPage> {
                         autocorrect: false,
                         cursorColor: Colors.blueAccent,
                         enabled: true,
-                        obscureText: true,
+                        obscureText: !togglePassword,
                         decoration: InputDecoration(
-                            labelText: "Password",
-                            border: const OutlineInputBorder(),
-                            suffixIcon: IconButton(
-                                onPressed: () {},
-                                icon: const Icon(Icons.visibility)),
-                            prefixIcon: const Icon(Icons.lock)),
+                          labelText: "Password",
+                          border: const OutlineInputBorder(),
+                          suffixIcon: IconButton(
+                            onPressed: toggle,
+                            icon: togglePassword
+                                ? Icon(Icons.visibility)
+                                : Icon(Icons.visibility_off),
+                          ),
+                          prefixIcon: const Icon(Icons.lock),
+                        ),
                       ),
                     ],
                   ),
@@ -74,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextButton(
                         onPressed: () {},
                         child: Text(
-                          "Lupa Password?",
+                          "Lupa Password atau NIP?",
                           style: GoogleFonts.roboto(
                               color: Colors.blue,
                               fontSize: 14,
@@ -98,8 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                                             BorderRadius.circular(32)))),
                             icon: const Icon(Icons.login),
                             onPressed: () {
-                              Navigator.of(context)
-                                  .pushReplacementNamed('/main_page');
+                              Navigator.of(context).pushNamed('/main_page');
                             },
                             label: const Text("MASUK")),
                       ),

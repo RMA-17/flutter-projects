@@ -13,8 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "HSI App",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       routes: {
-        '/': (context) => const LoginPage(),
+        '/login': (context) => const LoginPage(),
         '/main_page': (context) => const MainPage()
       },
       debugShowCheckedModeBanner: false,
